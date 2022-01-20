@@ -1,0 +1,38 @@
+# Import menu links to default pages, like About us.
+id: menus
+migration_tags: dummy
+label: 'Create main menu links'
+source:
+  plugin: embedded_data
+  data_rows:
+    -
+      id: 2
+      title: 'About'
+      menu_name: 'main'
+      link: '/sample_page_3'
+      weight: 2
+      expanded: 0
+    -
+      id: 3
+      title: 'Contact'
+      menu_name: 'main'
+      link: '/sample_page_3'
+      weight: 3
+      expanded: 1
+  ids:
+    id:
+      type: integer
+process:
+  bundle:
+    plugin: default_value
+    default_value: menu_link_content
+  title: title
+  menu_name: menu_name
+  link/uri:
+    plugin: link_uri
+    source: link
+  weight: weight
+  expanded: expanded
+  link/options: '@opts'
+destination:
+  plugin: entity:menu_link_content

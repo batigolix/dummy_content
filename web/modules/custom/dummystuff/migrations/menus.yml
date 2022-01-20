@@ -6,17 +6,45 @@ source:
   plugin: embedded_data
   data_rows:
     -
-      id: 2
-      title: 'About'
+      id: 1
+      title: 'Bowsprit capstan'
       menu_name: 'main'
-      link: '/sample_page_3'
+      link: '/bowsprit-capstan'
+      weight: 2
+      expanded: 0
+    -
+      id: 2
+      title: 'Furl fluke quarter'
+      menu_name: 'main'
+      link: '/furl-fluke-quarter'
       weight: 2
       expanded: 0
     -
       id: 3
-      title: 'Contact'
+      title: 'Hempen halter'
       menu_name: 'main'
-      link: '/sample_page_3'
+      link: '/hempen-halter'
+      weight: 3
+      expanded: 1
+    -
+      id: 4
+      title: 'Floggin Brethern'
+      menu_name: 'main'
+      link: '/flogging-brethren'
+      weight: 3
+      expanded: 1
+    -
+      id: 5
+      title: 'Privateer policy'
+      menu_name: 'footer'
+      link: '<front>'
+      weight: 3
+      expanded: 1
+    -
+      id: 6
+      title: 'Terms of keelhauling'
+      menu_name: 'footer'
+      link: '<front>'
       weight: 3
       expanded: 1
   ids:
@@ -36,3 +64,6 @@ process:
   link/options: '@opts'
 destination:
   plugin: entity:menu_link_content
+migration_dependencies:
+  required:
+    - pages

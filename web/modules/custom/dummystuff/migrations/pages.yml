@@ -3,7 +3,7 @@ label: Sample Nodes - Page
 migration_tags: dummy
 source:
   plugin: embedded_data
-data_rows:
+  data_rows:
     -
       title: | 
         Furl fluke quarter marooned measured fer yer chains mizzenmast keel lee
@@ -17,21 +17,22 @@ data_rows:
     -
       title: |
         Hempen halter careen tack wench yard cable gangway furl gaff tender
-      path: /sample_page_2
+      path: /hempen-halter
       content_items:
         -
           sample_id: text1
         -
           sample_id: text2
     -
-      title: Bowsprit capstan hail-shot careen line bring a spring upon her cable
-      path: /sample_page_3
+      title: | 
+        Bowsprit capstan hail-shot careen line bring a spring upon her cable
+      path: /bowsprit-capstan
       content_items:
         -
           sample_id: text3
     -
-      title: flogging Brethren of the Coast Nelsons folly gibbet
-      path: /sample_page_4
+      title: Flogging Brethren of the Coast Nelsons folly gibbet
+      path: /flogging-brethren
       content_items:
         -
           sample_id: text4
@@ -58,14 +59,10 @@ process:
         plugin: migration_lookup
         migration:
           - texts
-#          - sample_paragraphs_image
         source: sample_id
       target_revision_id: '@target_id'
-#  'field_link/uri': link_uri
-#  'field_link/title': link_text
 destination:
   plugin: entity:node
 migration_dependencies:
   required:
-    - sample_paragraphs_text
-#    - sample_paragraphs_image
+    - texts

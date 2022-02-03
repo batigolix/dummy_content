@@ -19,6 +19,8 @@
         "drupal/core-composer-scaffold": "^9",
         "drupal/core-project-message": "^9",
         "drupal/core-recommended": "^9",
+        "drupal/default_content": "^2.0@alpha",
+        "drupal/devel": "^4.1",
         "drupal/migrate_plus": "^5.2",
         "drupal/migrate_tools": "^5.1",
         "drupal/paragraphs": "^1.12",
